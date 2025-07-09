@@ -23,6 +23,7 @@ function initializeApp() {
     setupContactForm();
     setupScrollEffects();
     setupAnimations();
+    setupIOSFixes();
 }
 
 // إعداد التنقل
@@ -537,6 +538,89 @@ function setupDarkMode() {
     
     // إضافة زر الوضع المظلم (اختياري)
     // document.body.appendChild(darkModeToggle);
+}
+
+// إصلاحات خاصة بـ iOS
+function setupIOSFixes() {
+    // إصلاح مشكلة الفراغات في iOS
+    function fixIOSLayout() {
+        // إعادة تطبيق الأنماط
+        document.body.style.width = '100%';
+        document.body.style.maxWidth = '100vw';
+        document.body.style.overflowX = 'hidden';
+        // منع الحركة الجانبية
+        document.body.style.position = 'fixed';
+        document.body.style.top = '0';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.bottom = '0';
+        document.body.style.overflowY = 'auto';
+        document.body.style.overflowX = 'hidden';
+        
+        // إصلاح جميع العناصر
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(element => {
+            element.style.maxWidth = '100%';
+            element.style.boxSizing = 'border-box';
+        });
+        
+        // إصلاح خاص للحاويات
+        const containers = document.querySelectorAll('.container, .services-grid, .projects-grid, .features, .stats');
+        containers.forEach(container => {
+            container.style.width = '100%';
+            container.style.maxWidth = '100%';
+            container.style.boxSizing = 'border-box';
+        });
+        
+        // إصلاح خاص للصور
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.style.maxWidth = '100%';
+            img.style.height = 'auto';
+            img.style.display = 'block';
+        });
+    }
+    
+    // تطبيق الإصلاحات فوراً
+    fixIOSLayout();
+    
+    // تطبيق الإصلاحات عند تغيير حجم النافذة
+    window.addEventListener('resize', debounce(fixIOSLayout, 100));
+    
+    // تطبيق الإصلاحات عند تحميل الصفحة
+    window.addEventListener('load', fixIOSLayout);
+    
+    // تطبيق الإصلاحات عند تغيير الاتجاه
+    window.addEventListener('orientationchange', () => {
+        setTimeout(fixIOSLayout, 100);
+    });
+    
+    // تطبيق الإصلاحات كل ثانية لمدة 5 ثوان (للتأكد من التطبيق)
+    let fixCount = 0;
+    const fixInterval = setInterval(() => {
+        fixIOSLayout();
+        fixCount++;
+        if (fixCount >= 5) {
+            clearInterval(fixInterval);
+        }
+    }, 1000);
+    
+    // منع الحركة الجانبية عند النقر
+    document.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+    
+    // منع الحركة الجانبية عند التمرير
+    document.addEventListener('scroll', function() {
+        window.scrollTo(0, window.scrollY);
+    });
+    
+    // منع الحركة الجانبية عند تغيير الحجم
+    window.addEventListener('resize', function() {
+        document.body.style.width = '100%';
+        document.body.style.maxWidth = '100vw';
+        document.body.style.overflowX = 'hidden';
+    });
 }
 
 // تهيئة الوضع المظلم (يمكن تفعيله لاحقاً)
