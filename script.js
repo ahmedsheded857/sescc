@@ -41,8 +41,12 @@ function setupNavigation() {
         const icon = hamburger.querySelector('i');
         if (isMenuOpen) {
             icon.className = 'fas fa-times';
+            // منع الحركة الجانبية عند فتح القائمة
+            document.body.style.overflowX = 'hidden';
         } else {
             icon.className = 'fas fa-bars';
+            // منع الحركة الجانبية عند إغلاق القائمة
+            document.body.style.overflowX = 'hidden';
         }
     });
 
@@ -54,6 +58,8 @@ function setupNavigation() {
                 isMenuOpen = false;
                 const icon = hamburger.querySelector('i');
                 icon.className = 'fas fa-bars';
+                // منع الحركة الجانبية عند إغلاق القائمة
+                document.body.style.overflowX = 'hidden';
             }
         });
     });
@@ -579,6 +585,45 @@ function setupIOSFixes() {
             img.style.height = 'auto';
             img.style.display = 'block';
         });
+        
+        // إصلاح خاص بالهيدر والنافبار
+        const header = document.querySelector('#header');
+        const nav = document.querySelector('nav');
+        const logo = document.querySelector('.logo');
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        
+        if (header) {
+            header.style.width = '100%';
+            header.style.maxWidth = '100%';
+            header.style.overflowX = 'hidden';
+            header.style.boxSizing = 'border-box';
+        }
+        
+        if (nav) {
+            nav.style.width = '100%';
+            nav.style.maxWidth = '100%';
+            nav.style.overflowX = 'hidden';
+            nav.style.boxSizing = 'border-box';
+        }
+        
+        if (logo) {
+            logo.style.maxWidth = '100%';
+            logo.style.overflowX = 'hidden';
+            logo.style.boxSizing = 'border-box';
+        }
+        
+        if (navLinks) {
+            navLinks.style.maxWidth = '100vw';
+            navLinks.style.overflowX = 'hidden';
+            navLinks.style.boxSizing = 'border-box';
+        }
+        
+        if (hamburger) {
+            hamburger.style.maxWidth = '100%';
+            hamburger.style.overflowX = 'hidden';
+            hamburger.style.boxSizing = 'border-box';
+        }
     }
     
     // تطبيق الإصلاحات فوراً
