@@ -5,49 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SESCC - شركة المقاولات الهندسية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- الشريط العلوي -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="./logo DONE.png" alt="SESCC">
-                <span>SESCC</span>
-            </div>
-            <ul class="nav-menu">
+    <header class="animate__fadeInCustom">
+            <nav>
+            <div class="logo animate__slideInLeft">
+                <img src="./logo DONE.png" alt="">
+                    <span></span>
+                </div>
+            <ul class="nav-menu animate__slideInRight">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#about">من نحن</a></li>
                 <li><a href="#services">الخدمات</a></li>
                 <li><a href="#projects">المشاريع</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+                </ul>
+            <div class="menu-toggle animate__zoomIn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
     </header>
 
     <!-- الصفحة الرئيسية -->
     <section id="home">
         <div class="hero">
-            <h1>شركة SESCC للمقاولات الهندسية</h1>
-            <p>نقدم حلولاً هندسية متكاملة بمعايير الجودة العالمية</p>
-            <a href="#contact" class="btn">تواصل معنا</a>
+            <h1 class="animate__fadeInCustom">شركة SESCC للمقاولات الهندسية</h1>
+            <p class="animate__fadeInCustom animate__delay-1s">نقدم حلولاً هندسية متكاملة بمعايير الجودة العالمية</p>
+            <a href="#contact" class="btn animate__zoomIn">تواصل معنا</a>
         </div>
     </section>
 
     <!-- قسم من نحن -->
     <section id="about">
         <div class="container">
-            <h2>من نحن</h2>
+            <h2 class="animate__fadeInCustom">من نحن</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <h3>شركة SESCC الرائدة في مجال المقاولات</h3>
-                    <p>تأسست شركة SESCC للمقاولات الهندسية عام 1998، وتخصصت في تنفيذ المشاريع الإنشائية والهندسية بجميع أنواعها.</p>
-                    <p>نفتخر بفريقنا من المهندسين والخبراء الذين يتمتعون بخبرات واسعة في مختلف التخصصات الهندسية.</p>
+                <div class="about-text animate__slideInLeft">
+                    <h3>شركة المقاولات المستدامة (SESCC)</h3>
+                    <p>SESCC هي شركة رائدة في مجال المقاولات والهندسة، ملتزمة بتقديم مشاريع عالية الجودة ومستدامة. تتخصص الشركة في مجموعة واسعة من الخدمات، مع ضمان التميز في التنفيذ والالتزام بأحدث المعايير العالمية.</p>
+                    <h4>رؤيتنا</h4>
+                    <p>تهدف SESCC إلى تحويل الرؤى التقنية إلى واقع ملموس، من خلال الجمع بين الابتكار والاستدامة والدقة في كل مشروع.</p>
+                    <h4>الالتزام بالجودة</h4>
+                    <p>تلتزم SESCC باستخدام أحدث التقنيات والالتزام بأعلى معايير الجودة والسلامة، والتعاون مع شركاء عالميين لضمان توفر أفضل المواد والمعدات، وتقديم مشاريع تجمع بين الجمال والوظيفية.</p>
                 </div>
-                <div class="about-image">
+                <div class="about-image animate__slideInRight">
                     <img src="./image/istockphoto-1627235585-612x612.webp" alt="فريق العمل">
                 </div>
             </div>
@@ -57,25 +61,62 @@
     <!-- قسم الخدمات -->
     <section id="services">
         <div class="container">
-            <h2>خدماتنا</h2>
+            <h2 class="animate__fadeInCustom">خدماتنا</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <img src="./image/istockphoto-1627235585-612x612.webp" alt="إنشاءات مدنية">
-                    <h3>الإنشاءات المدنية</h3>
-                    <p>تنفيذ المشاريع الإنشائية من مباني سكنية وتجارية وجسور وأنفاق وطرق.</p>
-                    <a href="#contact" class="btn">اطلب الخدمة</a>
+                <div class="service-card animate__zoomIn">
+                    <img src="./image/istockphoto-1627235585-612x612.webp" alt="المقاولات العامة والإنشاءات">
+                    <h3>المقاولات العامة والإنشاءات</h3>
+                    <p>تنفيذ مشاريع المباني السكنية والتجارية والصناعية بجودة عالية وباستخدام أحدث التقنيات والمواد.</p>
                 </div>
-                <div class="service-card">
-                    <img src="./image/istockphoto-1627235585-612x612.webp" alt="تصميم معماري">
-                    <h3>التصميم المعماري</h3>
-                    <p>تصميمات معمارية مبتكرة تلبي احتياجات العملاء وتواكب أحدث الاتجاهات العالمية.</p>
-                    <a href="#contact" class="btn">اطلب الخدمة</a>
+                <div class="service-card animate__zoomIn animate__delay-1s">
+                    <img src="./image/istockphoto-981340804-612x612.webp" alt="الإشراف الهندسي والفني">
+                    <h3>الإشراف الهندسي والفني</h3>
+                    <p>خدمات هندسية متكاملة تشمل التصميم والإشراف الفني باستخدام برامج هندسية حديثة لضمان الدقة والكفاءة.</p>
                 </div>
-                <div class="service-card">
-                    <img src="./image/istockphoto-1627235585-612x612.webp" alt="تشطيبات وديكور">
-                    <h3>أعمال التشطيبات والديكور</h3>
-                    <p>تنفيذ أعمال التشطيبات الداخلية والخارجية والديكورات بأجود المواد.</p>
-                    <a href="#contact" class="btn">اطلب الخدمة</a>
+                <div class="service-card animate__zoomIn animate__delay-2s">
+                    <img src="./image/istockphoto-981343902-612x612.webp" alt="البنية التحتية والطرق">
+                    <h3>البنية التحتية والطرق</h3>
+                    <p>تنفيذ وصيانة مشاريع البنية التحتية من طرق وجسور وأنفاق وحلول مستدامة للبنية التحتية.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-1s">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="الأنظمة الكهربائية والأمنية والتحكم">
+                    <h3>الأنظمة الكهربائية والأمنية والتحكم</h3>
+                    <p>تركيب وصيانة أنظمة كهربائية متقدمة وحلول أمنية وأنظمة تحكم عالية الجودة لمختلف المشاريع.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-2s">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="الاتصالات والشبكات وأنظمة السلامة">
+                    <h3>الاتصالات والشبكات وأنظمة السلامة</h3>
+                    <p>حلول مبتكرة في شبكات الاتصالات وأنظمة البيانات والسلامة لضمان أنظمة موثوقة وآمنة للعملاء.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-1s">
+                    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80" alt="الطاقة الشمسية والتكييف وأنظمة الحريق">
+                    <h3>الطاقة الشمسية والتكييف وأنظمة الحريق</h3>
+                    <p>توريد وتركيب أنظمة الطاقة الشمسية والتكييف وأنظمة الحماية من الحريق بكفاءة عالية ووفق معايير السلامة.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-2s">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="الخدمات الصناعية ومحطات الوقود">
+                    <h3>الخدمات الصناعية ومحطات الوقود</h3>
+                    <p>تنفيذ وصيانة محطات الوقود والخدمات الصناعية مع ضمان أعلى معايير السلامة والوظيفية.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-1s">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="الاستيراد والتصدير وتوريد المعدات">
+                    <h3>الاستيراد والتصدير وتوريد المعدات</h3>
+                    <p>استيراد وتصدير المواد والمعدات الهندسية بالتعاون مع شركاء عالميين لتوريد أنظمة طاقة وأجهزة كهربائية ومواد بناء وأنظمة أمان.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-2s">
+                    <img src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=400&q=80" alt="إدارة المشاريع والتنسيق الفني">
+                    <h3>إدارة المشاريع والتنسيق الفني</h3>
+                    <p>إدارة جميع مراحل المشاريع والتنسيق الفني لضمان التسليم في الوقت المحدد وبأعلى جودة.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-1s">
+                    <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="الخدمات العقارية والتطوير العقاري">
+                    <h3>الخدمات العقارية والتطوير العقاري</h3>
+                    <p>تقديم خدمات التطوير العقاري وإدارة الممتلكات مع التركيز على حلول حضرية حديثة ومستدامة.</p>
+                </div>
+                <div class="service-card animate__zoomIn animate__delay-2s">
+                    <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="مراكز التدريب والتطوير المهني">
+                    <h3>مراكز التدريب والتطوير المهني</h3>
+                    <p>تأسيس مراكز تدريب متقدمة لتطوير المهارات الهندسية والإنشائية من خلال برامج متخصصة.</p>
                 </div>
             </div>
         </div>
@@ -84,27 +125,62 @@
     <!-- قسم المشاريع -->
     <section id="projects">
         <div class="container">
-            <h2>مشاريعنا</h2>
+            <h2 class="animate__fadeInCustom">مشاريعنا</h2>
+            <!-- أزرار التصفية -->
+            <div class="filter-buttons animate__fadeInCustom">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="residential">سكني</button>
+                <button class="filter-btn" data-filter="commercial">تجاري</button>
+                <button class="filter-btn" data-filter="industrial">صناعي</button>
+                <button class="filter-btn" data-filter="infrastructure">بنية تحتية</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card animate__fadeInCustom" data-category="residential">
                     <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="مجمع سكني">
                     <div class="project-info">
                         <h3>مجمع سكني فاخر</h3>
                         <p>تنفيذ مجمع سكني مكون من 10 فلل في منطقة الرياض</p>
+                        <span class="category">سكني</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate__fadeInCustom" data-category="commercial">
                     <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="مركز تجاري">
                     <div class="project-info">
                         <h3>مركز تجاري حديث</h3>
                         <p>تصميم وتنفيذ مركز تجاري بمساحة 20,000 م² في جدة</p>
+                        <span class="category">تجاري</span>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate__fadeInCustom" data-category="industrial">
                     <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1413&q=80" alt="مصنع">
                     <div class="project-info">
                         <h3>مصنع متكامل</h3>
                         <p>إنشاء مصنع للأغذية بمواصفات عالمية في الدمام</p>
+                        <span class="category">صناعي</span>
+                    </div>
+                </div>
+                <div class="project-card animate__fadeInCustom" data-category="infrastructure">
+                    <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="جسر">
+                    <div class="project-info">
+                        <h3>جسر رئيسي</h3>
+                        <p>تصميم وتنفيذ جسر بطول 500 متر في المدينة المنورة</p>
+                        <span class="category">بنية تحتية</span>
+                    </div>
+                </div>
+                <div class="project-card animate__fadeInCustom" data-category="residential">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="عمارة سكنية">
+                    <div class="project-info">
+                        <h3>عمارة سكنية</h3>
+                        <p>بناء عمارة سكنية مكونة من 12 شقة في مكة المكرمة</p>
+                        <span class="category">سكني</span>
+                    </div>
+                </div>
+                <div class="project-card animate__fadeInCustom" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80" alt="فندق">
+                    <div class="project-info">
+                        <h3>فندق 5 نجوم</h3>
+                        <p>تشييد فندق فاخر بمواصفات عالمية في العاصمة الرياض</p>
+                        <span class="category">تجاري</span>
                     </div>
                 </div>
             </div>
@@ -114,9 +190,9 @@
     <!-- قسم اتصل بنا -->
     <section id="contact">
         <div class="container">
-            <h2>اتصل بنا</h2>
+            <h2 class="animate__fadeInCustom">اتصل بنا</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info animate__slideInLeft">
                     <h3>معلومات التواصل</h3>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -140,28 +216,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form animate__slideInRight">
                     <h3>أرسل لنا رسالة</h3>
-                    <form>
+                    <form id="contactForm" autocomplete="on">
                         <div class="form-group">
-                            <label>الاسم الكامل</label>
-                            <input type="text" required>
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required autocomplete="name" placeholder="اكتب اسمك الكامل">
                         </div>
                         <div class="form-group">
-                            <label>البريد الإلكتروني</label>
-                            <input type="email" required>
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com">
                         </div>
                         <div class="form-group">
-                            <label>رقم الهاتف</label>
-                            <input type="tel" required>
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="05xxxxxxxx">
                         </div>
                         <div class="form-group">
-                            <label>الموضوع</label>
-                            <input type="text" required>
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" name="subject" required autocomplete="off" placeholder="موضوع الرسالة">
                         </div>
                         <div class="form-group">
-                            <label>الرسالة</label>
-                            <textarea required></textarea>
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" required autocomplete="off" placeholder="اكتب رسالتك هنا..."></textarea>
                         </div>
                         <button type="submit" class="btn">إرسال الرسالة</button>
                     </form>
@@ -174,11 +250,11 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section animate__fadeInCustom">
                     <h3>عن الشركة</h3>
                     <p>شركة SESCC للمقاولات الهندسية هي شركة رائدة في مجال الإنشاءات والتطوير العقاري.</p>
                 </div>
-                <div class="footer-section">
+                <div class="footer-section animate__fadeInCustom animate__delay-1s">
                     <h3>روابط سريعة</h3>
                     <ul>
                         <li><a href="#home">الرئيسية</a></li>
@@ -188,14 +264,14 @@
                         <li><a href="#contact">اتصل بنا</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-section animate__fadeInCustom animate__delay-2s">
                     <h3>معلومات التواصل</h3>
                     <p>الرياض، المملكة العربية السعودية</p>
                     <p>+966 12 345 6789</p>
                     <p>info@sescc.sud</p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom animate__fadeInCustom">
                 <p>&copy; 2023 شركة SESCC للمقاولات الهندسية. جميع الحقوق محفوظة.</p>
             </div>
         </div>
