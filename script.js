@@ -555,11 +555,7 @@ function setupIOSFixes() {
         document.body.style.maxWidth = '100vw';
         document.body.style.overflowX = 'hidden';
         // منع الحركة الجانبية
-        document.body.style.position = 'fixed';
-        document.body.style.top = '0';
-        document.body.style.left = '0';
-        document.body.style.right = '0';
-        document.body.style.bottom = '0';
+        document.body.style.position = 'relative';
         document.body.style.overflowY = 'auto';
         document.body.style.overflowX = 'hidden';
         
@@ -652,12 +648,21 @@ function setupIOSFixes() {
     
     // منع الحركة الجانبية عند النقر
     document.addEventListener('touchstart', function(e) {
-        e.preventDefault();
+        // منع الحركة الجانبية فقط
+        if (e.touches.length === 1) {
+            const touch = e.touches[0];
+            if (Math.abs(touch.movementX) > Math.abs(touch.movementY)) {
+                e.preventDefault();
+            }
+        }
     }, { passive: false });
     
     // منع الحركة الجانبية عند التمرير
     document.addEventListener('scroll', function() {
-        window.scrollTo(0, window.scrollY);
+        // التأكد من أن التمرير عمودي فقط
+        if (window.scrollX !== 0) {
+            window.scrollTo(0, window.scrollY);
+        }
     });
     
     // منع الحركة الجانبية عند تغيير الحجم
@@ -665,6 +670,18 @@ function setupIOSFixes() {
         document.body.style.width = '100%';
         document.body.style.maxWidth = '100vw';
         document.body.style.overflowX = 'hidden';
+        // إعادة تطبيق الإصلاحات
+        fixIOSLayout();
+    });
+    
+    // منع الحركة الجانبية عند تحميل الصفحة
+    window.addEventListener('load', function() {
+        // التأكد من عدم وجود تمرير أفقي
+        if (window.scrollX !== 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+        // تطبيق الإصلاحات
+        fixIOSLayout();
     });
 }
 
